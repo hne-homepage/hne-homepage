@@ -4,151 +4,176 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>후니엔지니어링 | HNE</title>
-  <meta name="description" content="후니엔지니어링은 배관, 가스배관, 기계설비, 플랜트 배관공사, 화학공장 배관 설치 전문기업입니다." />
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,'Noto Sans KR',sans-serif;color:#071a34;background:#fff}
+    a{text-decoration:none;color:inherit}
+    img{display:block;width:100%}
+    .wrap{width:min(1440px,92%);margin:0 auto}
+
+    header{height:82px;background:#061b35;color:#fff}
+    .head{height:82px;display:flex;align-items:center;justify-content:space-between}
+    .logo{width:180px;height:auto}
+    nav{display:flex;gap:70px;font-weight:700}
+    nav a{color:#fff}
+    .menu{font-size:34px}
+
+    .hero{height:520px;background:url('assets/hero.jpg') center/cover no-repeat}
+    .hero::before{content:"";display:block;height:100%;background:linear-gradient(90deg,rgba(5,22,45,.88),rgba(5,22,45,.55),rgba(5,22,45,.05))}
+    .hero-inner{position:absolute;top:160px;left:4%;color:#fff}
+    .hero h4{font-size:24px;margin:0 0 18px;font-weight:500}
+    .hero h1{font-size:68px;line-height:1;margin:0 0 22px;font-weight:900;letter-spacing:-3px}
+    .hero h3{font-size:23px;margin:0 0 24px}
+    .hero p{font-size:17px;line-height:1.7}
+    .btns{display:flex;gap:16px;margin-top:24px}
+    .btn{width:175px;padding:14px 0;border:1px solid #fff;text-align:center;font-weight:700}
+    .btn.white{background:#fff;color:#071a34}
+
+    .business{padding:34px 0 42px;background:#fff;text-align:center}
+    .en{font-size:14px;font-weight:800;color:#40658d;margin:0}
+    h2{font-size:34px;margin:0 0 34px;color:#071a34}
+    .biz-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+    .biz-card{border:1px solid #d6dce5;padding:28px 14px 24px;min-height:150px}
+    .icon{font-size:42px;margin-bottom:12px}
+    .biz-card h3{font-size:18px;margin:0 0 10px}
+    .biz-card p{font-size:14px;line-height:1.5;margin:0;color:#26384f}
+
+    .projects{background:#061b35;color:#fff;padding:34px 0}
+    .project-row{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center}
+    .project-title h2{color:#fff;text-align:left;margin:4px 0 12px}
+    .project-title p{font-size:15px;line-height:1.7;color:#d9e4f2}
+    .small-btn{display:inline-block;margin-top:12px;border:1px solid #fff;padding:8px 26px}
+    .work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .work{position:relative;height:165px;overflow:hidden}
+    .work img{height:100%;object-fit:cover}
+    .work h3{position:absolute;left:0;right:0;bottom:0;margin:0;padding:14px;background:rgba(6,27,53,.82);font-size:17px;text-align:center}
+
+    .contact{background:#fff;padding:26px 0}
+    .contact-row{display:grid;grid-template-columns:260px 1fr 1fr 1.5fr 230px;gap:22px;align-items:center}
+    .contact h2{text-align:left;margin:0;font-size:32px}
+    .contact p{margin:4px 0 0;font-size:14px}
+    .info{border-left:1px solid #d8dee8;padding-left:24px}
+    .info b{display:block;font-size:14px;margin-bottom:4px}
+    .info span,.info a{font-size:17px;font-weight:700}
+    .foot-logo{background:#061b35;padding:20px}
+    .foot-logo img{max-width:160px;margin:auto}
+
+    footer{background:#061b35;color:#fff;text-align:center;padding:20px;font-size:13px}
+
+    @media(max-width:1000px){
+      nav{gap:24px}
+      .biz-grid{grid-template-columns:repeat(3,1fr)}
+      .project-row{grid-template-columns:1fr}
+      .work-grid{grid-template-columns:repeat(2,1fr)}
+      .contact-row{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:600px){
+      header{height:auto}
+      .head{height:auto;padding:16px 0;flex-direction:column;gap:14px}
+      nav{flex-wrap:wrap;justify-content:center}
+      .menu{display:none}
+      .hero{height:560px}
+      .hero-inner{top:170px;left:6%;right:6%}
+      .hero h1{font-size:44px}
+      .hero h3{font-size:18px}
+      .biz-grid,.work-grid,.contact-row{grid-template-columns:1fr}
+    }
+  </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand" aria-label="후니엔지니어링 홈">
-        <img src="assets/logo.png" alt="HNE 로고" />
-        <span class="brand-text">HNE</span>
-      </a>
-      <nav class="nav">
+  <header>
+    <div class="wrap head">
+      <img class="logo" src="assets/logo.png" alt="HNE 로고">
+      <nav>
         <a href="#about">회사소개</a>
         <a href="#business">사업영역</a>
         <a href="#projects">시공사례</a>
         <a href="#contact">문의하기</a>
       </nav>
+      <div class="menu">☰</div>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-overlay">
-      <div class="container hero-content">
-        <p class="eyebrow">HOONI ENGINEERING</p>
-        <h1>산업 배관 시스템의<br />기준을 만듭니다</h1>
-        <p class="hero-desc">
-          배관 · 가스배관 · 기계설비 · 플랜트 배관공사 · 화학공장 배관 설치
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#business">사업영역 보기</a>
-          <a class="btn secondary" href="#contact">문의하기</a>
-        </div>
+    <div class="hero-inner">
+      <h4>산업의 흐름을 연결하고, 미래를 설계합니다</h4>
+      <h1>후니엔지니어링</h1>
+      <h3>배관 · 가스배관 · 기계설비 · 플랜트 배관공사 · 화학공장 배관 설치</h3>
+      <p>풍부한 경험과 검증된 기술력으로<br>안전하고 완벽한 시공을 약속드립니다.</p>
+      <div class="btns">
+        <a class="btn" href="#business">사업영역 보기 〉</a>
+        <a class="btn white" href="#contact">문의하기 〉</a>
       </div>
     </div>
   </section>
 
-  <main>
-    <section id="about" class="section about">
-      <div class="container split">
-        <div>
-          <p class="section-kicker">ABOUT US</p>
-          <h2>정밀한 시공, 안전한 설비,<br />신뢰 있는 결과</h2>
-        </div>
-        <p>
-          후니엔지니어링은 산업 배관 및 기계설비 분야의 전문성을 바탕으로
-          플랜트 현장, 생산설비, 화학공장 배관 설치 및 유지보수를 수행합니다.
-          현장 조건에 맞는 정확한 시공과 안정적인 품질로 고객의 설비 운영을 지원합니다.
-        </p>
-      </div>
-    </section>
+  <section id="business" class="business">
+    <div class="wrap">
+      <p class="en">OUR BUSINESS</p>
+      <h2>사업영역</h2>
 
-    <section id="business" class="section business">
-      <div class="container">
-        <p class="section-kicker center">OUR BUSINESS</p>
-        <h2 class="center">사업영역</h2>
-        <div class="business-grid">
-          <article>
-            <span>01</span>
-            <h3>배관공사</h3>
-            <p>각종 산업 설비 배관 공사 전문 시공</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>가스배관</h3>
-            <p>도시가스, 산업용 가스배관 설계 및 시공</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>기계설비</h3>
-            <p>기계설비 설치 및 배관 토탈 솔루션 제공</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>플랜트 배관공사</h3>
-            <p>플랜트 설비 배관 공사 전문 수행</p>
-          </article>
-          <article>
-            <span>05</span>
-            <h3>화학공장 배관 설치</h3>
-            <p>화학공장 배관 설치 및 증설 공사</p>
-          </article>
-          <article>
-            <span>06</span>
-            <h3>유지보수</h3>
-            <p>설비 진단, 유지보수 및 긴급 대응 서비스</p>
-          </article>
-        </div>
+      <div class="biz-grid">
+        <div class="biz-card"><div class="icon">⚙</div><h3>배관공사</h3><p>각종 산업 설비 배관 공사<br>전문 시공</p></div>
+        <div class="biz-card"><div class="icon">◉</div><h3>가스배관</h3><p>도시가스, 산업용 가스배관<br>설계 및 시공</p></div>
+        <div class="biz-card"><div class="icon">⚙</div><h3>기계설비</h3><p>기계설비 설치 및 배관<br>토탈 솔루션 제공</p></div>
+        <div class="biz-card"><div class="icon">▥</div><h3>플랜트 배관공사</h3><p>플랜트 설비 배관 공사<br>전문 수행</p></div>
+        <div class="biz-card"><div class="icon">⚗</div><h3>화학공장 배관 설치</h3><p>화학공장 배관 설치 및<br>증설 공사</p></div>
+        <div class="biz-card"><div class="icon">🔧</div><h3>유지보수</h3><p>설비 진단, 유지보수 및<br>긴급 대응 서비스</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects" class="projects">
-      <div class="container project-wrap">
-        <div class="project-title">
-          <p class="section-kicker">PROJECTS</p>
-          <h2>시공사례</h2>
-          <p>다양한 현장에서 쌓아온 경험과 기술력으로 최고의 품질을 제공합니다.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <img src="assets/work1.jpg" alt="산업설비 배관 구축" />
-            <h3>산업설비 배관 구축</h3>
-          </article>
-          <article class="project-card">
-            <img src="assets/work2.jpg" alt="공장 가스라인 설치" />
-            <h3>공장 가스라인 설치</h3>
-          </article>
-          <article class="project-card">
-            <img src="assets/work3.jpg" alt="플랜트 배관" />
-            <h3>플랜트 배관</h3>
-          </article>
-          <article class="project-card">
-            <img src="assets/work4.jpg" alt="화학설비 라인 증설" />
-            <h3>화학설비 라인 증설</h3>
-          </article>
-        </div>
+  <section id="projects" class="projects">
+    <div class="wrap project-row">
+      <div class="project-title">
+        <p class="en">PROJECTS</p>
+        <h2>시공사례</h2>
+        <p>다양한 현장에서 쌓아온 경험과 기술력으로 최고의 품질을 제공합니다.</p>
+        <a class="small-btn" href="#contact">더보기 〉</a>
       </div>
-    </section>
 
-    <section id="contact" class="section contact">
-      <div class="container contact-grid">
-        <div>
-          <p class="section-kicker">CONTACT US</p>
-          <h2>문의하기</h2>
-          <p>후니엔지니어링은 고객님의 문의를 언제나 환영합니다.</p>
-        </div>
-        <div class="contact-item">
-          <strong>전화문의</strong>
-          <a href="tel:010-5692-5002">010-5692-5002</a>
-        </div>
-        <div class="contact-item">
-          <strong>이메일</strong>
-          <a href="mailto:ost@hneng.co.kr">ost@hneng.co.kr</a>
-        </div>
-        <div class="contact-item">
-          <strong>주소</strong>
-          <span>충청남도 천안시 동남구 풍세면 태학산로 223-42</span>
-        </div>
+      <div class="work-grid">
+        <div class="work"><img src="assets/work1.jpg" alt="산업설비 배관 구축"><h3>산업설비 배관 구축</h3></div>
+        <div class="work"><img src="assets/work2.jpg" alt="공장 가스라인 설치"><h3>공장 가스라인 설치</h3></div>
+        <div class="work"><img src="assets/work3.jpg" alt="플랜트 배관"><h3>플랜트 배관</h3></div>
+        <div class="work"><img src="assets/work4.jpg" alt="화학설비 라인 증설"><h3>화학설비 라인 증설</h3></div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap contact-row">
+      <div>
+        <p class="en">CONTACT US</p>
+        <h2>문의하기</h2>
+        <p>후니엔지니어링은 언제나 고객님의 문의를 환영합니다.</p>
+      </div>
+
+      <div class="info">
+        <b>전화문의</b>
+        <a href="tel:010-5692-5002">010-5692-5002</a>
+      </div>
+
+      <div class="info">
+        <b>이메일</b>
+        <a href="mailto:ost@hneng.co.kr">ost@hneng.co.kr</a>
+      </div>
+
+      <div class="info">
+        <b>주소</b>
+        <span>충청남도 천안시 동남구 풍세면<br>태학산로 223-42</span>
+      </div>
+
+      <div class="foot-logo">
+        <img src="assets/logo.png" alt="HNE 로고">
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <div class="container footer-inner">
-      <p>© 2026 HOONI ENGINEERING. All Rights Reserved.</p>
-      <p>후니엔지니어링</p>
-    </div>
+    © 2026 HOONI ENGINEERING. All Rights Reserved.
   </footer>
 </body>
 </html>
