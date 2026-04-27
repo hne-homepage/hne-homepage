@@ -1,179 +1,499 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>후니엔지니어링 | HNE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>후니엔지니어링 | HNE</title>
 
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,'Noto Sans KR',sans-serif;color:#071a34;background:#fff}
-    a{text-decoration:none;color:inherit}
-    img{display:block;width:100%}
-    .wrap{width:min(1440px,92%);margin:0 auto}
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header{height:82px;background:#061b35;color:#fff}
-    .head{height:82px;display:flex;align-items:center;justify-content:space-between}
-    .logo{width:180px;height:auto}
-    nav{display:flex;gap:70px;font-weight:700}
-    nav a{color:#fff}
-    .menu{font-size:34px}
+body {
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  color: #071a34;
+  background: #fff;
+}
 
-    .hero{height:520px;background:url('assets/hero.jpg') center/cover no-repeat}
-    .hero::before{content:"";display:block;height:100%;background:linear-gradient(90deg,rgba(5,22,45,.88),rgba(5,22,45,.55),rgba(5,22,45,.05))}
-    .hero-inner{position:absolute;top:160px;left:4%;color:#fff}
-    .hero h4{font-size:24px;margin:0 0 18px;font-weight:500}
-    .hero h1{font-size:68px;line-height:1;margin:0 0 22px;font-weight:900;letter-spacing:-3px}
-    .hero h3{font-size:23px;margin:0 0 24px}
-    .hero p{font-size:17px;line-height:1.7}
-    .btns{display:flex;gap:16px;margin-top:24px}
-    .btn{width:175px;padding:14px 0;border:1px solid #fff;text-align:center;font-weight:700}
-    .btn.white{background:#fff;color:#071a34}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    .business{padding:34px 0 42px;background:#fff;text-align:center}
-    .en{font-size:14px;font-weight:800;color:#40658d;margin:0}
-    h2{font-size:34px;margin:0 0 34px;color:#071a34}
-    .biz-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-    .biz-card{border:1px solid #d6dce5;padding:28px 14px 24px;min-height:150px}
-    .icon{font-size:42px;margin-bottom:12px}
-    .biz-card h3{font-size:18px;margin:0 0 10px}
-    .biz-card p{font-size:14px;line-height:1.5;margin:0;color:#26384f}
+img {
+  display: block;
+  max-width: 100%;
+}
 
-    .projects{background:#061b35;color:#fff;padding:34px 0}
-    .project-row{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center}
-    .project-title h2{color:#fff;text-align:left;margin:4px 0 12px}
-    .project-title p{font-size:15px;line-height:1.7;color:#d9e4f2}
-    .small-btn{display:inline-block;margin-top:12px;border:1px solid #fff;padding:8px 26px}
-    .work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .work{position:relative;height:165px;overflow:hidden}
-    .work img{height:100%;object-fit:cover}
-    .work h3{position:absolute;left:0;right:0;bottom:0;margin:0;padding:14px;background:rgba(6,27,53,.82);font-size:17px;text-align:center}
+.wrap {
+  width: min(1400px, 92%);
+  margin: 0 auto;
+}
 
-    .contact{background:#fff;padding:26px 0}
-    .contact-row{display:grid;grid-template-columns:260px 1fr 1fr 1.5fr 230px;gap:22px;align-items:center}
-    .contact h2{text-align:left;margin:0;font-size:32px}
-    .contact p{margin:4px 0 0;font-size:14px}
-    .info{border-left:1px solid #d8dee8;padding-left:24px}
-    .info b{display:block;font-size:14px;margin-bottom:4px}
-    .info span,.info a{font-size:17px;font-weight:700}
-    .foot-logo{background:#061b35;padding:20px}
-    .foot-logo img{max-width:160px;margin:auto}
+/* HEADER */
 
-    footer{background:#061b35;color:#fff;text-align:center;padding:20px;font-size:13px}
+header {
+  background: #031b3a;
+  height: 84px;
+}
 
-    @media(max-width:1000px){
-      nav{gap:24px}
-      .biz-grid{grid-template-columns:repeat(3,1fr)}
-      .project-row{grid-template-columns:1fr}
-      .work-grid{grid-template-columns:repeat(2,1fr)}
-      .contact-row{grid-template-columns:1fr 1fr}
-    }
-    @media(max-width:600px){
-      header{height:auto}
-      .head{height:auto;padding:16px 0;flex-direction:column;gap:14px}
-      nav{flex-wrap:wrap;justify-content:center}
-      .menu{display:none}
-      .hero{height:560px}
-      .hero-inner{top:170px;left:6%;right:6%}
-      .hero h1{font-size:44px}
-      .hero h3{font-size:18px}
-      .biz-grid,.work-grid,.contact-row{grid-template-columns:1fr}
-    }
-  </style>
+.header-inner {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 170px;
+}
+
+nav {
+  display: flex;
+  gap: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.menu {
+  font-size: 34px;
+  color: #fff;
+}
+
+/* HERO */
+
+.hero {
+  height: 560px;
+  background-image: linear-gradient(
+      90deg,
+      rgba(3, 27, 58, 0.88),
+      rgba(3, 27, 58, 0.62),
+      rgba(3, 27, 58, 0.15)
+    ),
+    url("./assets/hero.jpg?v=2");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  color: #fff;
+}
+
+.hero-sub {
+  font-size: 20px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: 72px;
+  line-height: 1;
+  margin-bottom: 24px;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.hero-main {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.hero-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  width: 180px;
+  padding: 14px 0;
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid #fff;
+}
+
+.btn.white {
+  background: #fff;
+  color: #071a34;
+}
+
+/* BUSINESS */
+
+.business {
+  padding: 60px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.en {
+  color: #3d648e;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 42px;
+  margin: 8px 0 40px;
+}
+
+.biz-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.biz-card {
+  border: 1px solid #d9dfe8;
+  padding: 30px 15px;
+  min-height: 180px;
+}
+
+.biz-icon {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.biz-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.biz-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* PROJECT */
+
+.projects {
+  background: #031b3a;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.project-wrap {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.project-left h2 {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.project-left p {
+  line-height: 1.7;
+  color: #dbe5f2;
+}
+
+.more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 28px;
+  border: 1px solid #fff;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.work-card {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.work-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-card h3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  margin: 0;
+  background: rgba(3, 27, 58, 0.82);
+  text-align: center;
+  font-size: 18px;
+}
+
+/* CONTACT */
+
+.contact {
+  padding: 40px 0;
+  background: #fff;
+}
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1.5fr 220px;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.contact-left p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.info {
+  border-left: 1px solid #d9dfe8;
+  padding-left: 24px;
+}
+
+.info strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.info span,
+.info a {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-logo {
+  background: #031b3a;
+  padding: 24px;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin: auto;
+}
+
+footer {
+  background: #031b3a;
+  color: #fff;
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+  .biz-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-wrap,
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    display: none;
+  }
+
+  .biz-grid,
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero-main {
+    font-size: 18px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap head">
-      <img class="logo" src="assets/logo.png" alt="HNE 로고">
-      <nav>
-        <a href="#about">회사소개</a>
-        <a href="#business">사업영역</a>
-        <a href="#projects">시공사례</a>
-        <a href="#contact">문의하기</a>
-      </nav>
-      <div class="menu">☰</div>
+
+<header>
+  <div class="wrap header-inner">
+    <img class="logo" src="./assets/logo.png?v=2" alt="HNE 로고">
+
+    <nav>
+      <a href="#">회사소개</a>
+      <a href="#">사업영역</a>
+      <a href="#">시공사례</a>
+      <a href="#">문의하기</a>
+    </nav>
+
+    <div class="menu">☰</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-content">
+    <div class="hero-sub">
+      산업의 흐름을 연결하고, 미래를 설계합니다
     </div>
-  </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <h4>산업의 흐름을 연결하고, 미래를 설계합니다</h4>
-      <h1>후니엔지니어링</h1>
-      <h3>배관 · 가스배관 · 기계설비 · 플랜트 배관공사 · 화학공장 배관 설치</h3>
-      <p>풍부한 경험과 검증된 기술력으로<br>안전하고 완벽한 시공을 약속드립니다.</p>
-      <div class="btns">
-        <a class="btn" href="#business">사업영역 보기 〉</a>
-        <a class="btn white" href="#contact">문의하기 〉</a>
-      </div>
+    <h1>후니엔지니어링</h1>
+
+    <div class="hero-main">
+      배관 · 가스배관 · 기계설비 · 플랜트 배관공사 · 화학공장 배관 설치
     </div>
-  </section>
 
-  <section id="business" class="business">
-    <div class="wrap">
-      <p class="en">OUR BUSINESS</p>
-      <h2>사업영역</h2>
-
-      <div class="biz-grid">
-        <div class="biz-card"><div class="icon">⚙</div><h3>배관공사</h3><p>각종 산업 설비 배관 공사<br>전문 시공</p></div>
-        <div class="biz-card"><div class="icon">◉</div><h3>가스배관</h3><p>도시가스, 산업용 가스배관<br>설계 및 시공</p></div>
-        <div class="biz-card"><div class="icon">⚙</div><h3>기계설비</h3><p>기계설비 설치 및 배관<br>토탈 솔루션 제공</p></div>
-        <div class="biz-card"><div class="icon">▥</div><h3>플랜트 배관공사</h3><p>플랜트 설비 배관 공사<br>전문 수행</p></div>
-        <div class="biz-card"><div class="icon">⚗</div><h3>화학공장 배관 설치</h3><p>화학공장 배관 설치 및<br>증설 공사</p></div>
-        <div class="biz-card"><div class="icon">🔧</div><h3>유지보수</h3><p>설비 진단, 유지보수 및<br>긴급 대응 서비스</p></div>
-      </div>
+    <div class="hero-desc">
+      풍부한 경험과 검증된 기술력으로<br>
+      안전하고 완벽한 시공을 약속드립니다.
     </div>
-  </section>
 
-  <section id="projects" class="projects">
-    <div class="wrap project-row">
-      <div class="project-title">
-        <p class="en">PROJECTS</p>
-        <h2>시공사례</h2>
-        <p>다양한 현장에서 쌓아온 경험과 기술력으로 최고의 품질을 제공합니다.</p>
-        <a class="small-btn" href="#contact">더보기 〉</a>
-      </div>
-
-      <div class="work-grid">
-        <div class="work"><img src="assets/work1.jpg" alt="산업설비 배관 구축"><h3>산업설비 배관 구축</h3></div>
-        <div class="work"><img src="assets/work2.jpg" alt="공장 가스라인 설치"><h3>공장 가스라인 설치</h3></div>
-        <div class="work"><img src="assets/work3.jpg" alt="플랜트 배관"><h3>플랜트 배관</h3></div>
-        <div class="work"><img src="assets/work4.jpg" alt="화학설비 라인 증설"><h3>화학설비 라인 증설</h3></div>
-      </div>
+    <div class="btn-group">
+      <a href="#" class="btn">사업영역 보기</a>
+      <a href="#" class="btn white">문의하기</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" class="contact">
-    <div class="wrap contact-row">
-      <div>
-        <p class="en">CONTACT US</p>
-        <h2>문의하기</h2>
-        <p>후니엔지니어링은 언제나 고객님의 문의를 환영합니다.</p>
+<section class="business">
+  <div class="wrap">
+    <div class="en">OUR BUSINESS</div>
+    <h2>사업영역</h2>
+
+    <div class="biz-grid">
+      <div class="biz-card">
+        <div class="biz-icon">⚙</div>
+        <h3>배관공사</h3>
+        <p>각종 산업 설비 배관 공사<br>전문 시공</p>
       </div>
 
-      <div class="info">
-        <b>전화문의</b>
-        <a href="tel:010-5692-5002">010-5692-5002</a>
+      <div class="biz-card">
+        <div class="biz-icon">◉</div>
+        <h3>가스배관</h3>
+        <p>도시가스, 산업용 가스배관<br>설계 및 시공</p>
       </div>
 
-      <div class="info">
-        <b>이메일</b>
-        <a href="mailto:ost@hneng.co.kr">ost@hneng.co.kr</a>
+      <div class="biz-card">
+        <div class="biz-icon">⚙</div>
+        <h3>기계설비</h3>
+        <p>기계설비 설치 및 배관<br>토탈 솔루션 제공</p>
       </div>
 
-      <div class="info">
-        <b>주소</b>
-        <span>충청남도 천안시 동남구 풍세면<br>태학산로 223-42</span>
+      <div class="biz-card">
+        <div class="biz-icon">▥</div>
+        <h3>플랜트 배관공사</h3>
+        <p>플랜트 설비 배관 공사<br>전문 수행</p>
       </div>
 
-      <div class="foot-logo">
-        <img src="assets/logo.png" alt="HNE 로고">
+      <div class="biz-card">
+        <div class="biz-icon">⚗</div>
+        <h3>화학공장 배관 설치</h3>
+        <p>화학공장 배관 설치 및<br>증설 공사</p>
+      </div>
+
+      <div class="biz-card">
+        <div class="biz-icon">🔧</div>
+        <h3>유지보수</h3>
+        <p>설비 진단, 유지보수 및<br>긴급 대응 서비스</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    © 2026 HOONI ENGINEERING. All Rights Reserved.
-  </footer>
+<section class="projects">
+  <div class="wrap project-wrap">
+
+    <div class="project-left">
+      <div class="en">PROJECTS</div>
+      <h2>시공사례</h2>
+      <p>
+        다양한 현장에서 쌓아온 경험과 기술력으로<br>
+        최고의 품질을 제공합니다.
+      </p>
+      <a href="#" class="more-btn">더보기</a>
+    </div>
+
+    <div class="work-grid">
+
+      <div class="work-card">
+        <img src="./assets/work1.jpg?v=2" alt="산업설비 배관 구축">
+        <h3>산업설비 배관 구축</h3>
+      </div>
+
+      <div class="work-card">
+        <img src="./assets/work2.jpg?v=2" alt="공장 가스라인 설치">
+        <h3>공장 가스라인 설치</h3>
+      </div>
+
+      <div class="work-card">
+        <img src="./assets/work3.jpg?v=2" alt="플랜트 배관">
+        <h3>플랜트 배관</h3>
+      </div>
+
+      <div class="work-card">
+        <img src="./assets/work4.jpg?v=2" alt="화학설비 라인 증설">
+        <h3>화학설비 라인 증설</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap contact-wrap">
+
+    <div class="contact-left">
+      <div class="en">CONTACT US</div>
+      <h2>문의하기</h2>
+      <p>후니엔지니어링은 언제나 고객님의 문의를 환영합니다.</p>
+    </div>
+
+    <div class="info">
+      <strong>전화문의</strong>
+      <a href="tel:01056925002">010-5692-5002</a>
+    </div>
+
+    <div class="info">
+      <strong>이메일</strong>
+      <a href="mailto:ost@hneng.co.kr">ost@hneng.co.kr</a>
+    </div>
+
+    <div class="info">
+      <strong>주소</strong>
+      <span>충청남도 천안시 동남구 풍세면<br>태학산로 223-42</span>
+    </div>
+
+    <div class="footer-logo">
+      <img src="./assets/logo.png?v=2" alt="HNE 로고">
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 HOONI ENGINEERING. All Rights Reserved.
+</footer>
+
 </body>
 </html>
